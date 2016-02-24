@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if test -n "${IRC_SERVER}" && test -n "${IRC_NICKNAME}"; then
+if test -n "%{IRC_SERVER}" && test -n "%{IRC_NICKNAME}"; then
   while read oldrev newrev refname; do
     branch=$(git rev-parse --symbolic --abbrev-ref $refname)
-    if echo "${BRANCHES}" | grep -q $branch ; then
+    if echo "%{BRANCHES}" | grep -q $branch ; then
       if expr "$oldrev" : '0*$' >/dev/null; then
         exit 0
       elif expr "$newrev" : '0*$' >/dev/null; then
