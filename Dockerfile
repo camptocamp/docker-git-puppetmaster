@@ -1,4 +1,4 @@
-FROM camptocamp/git
+FROM camptocamp/git:2.1.4-5
 
 maintainer mickael.canevet@camptocamp.com
 
